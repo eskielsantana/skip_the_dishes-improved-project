@@ -1,0 +1,33 @@
+{
+  "properties": [
+    {
+      "name": "app.kafka.teste",
+      "type": "java.lang.String",
+      "description": "Description for app.kafka.teste."
+    },
+    {
+      "name": "kafka.topic.name",
+      "type": "java.lang.String",
+      "description": "Description for kafka.topic.name."
+    },
+    {
+      "name": "kafka.server.ip",
+      "type": "java.lang.String",
+      "description": "Description for kafka.server.ip."
+    },
+    {
+      "name": "kafka.server.port",
+      "type": "java.lang.String",
+      "description": "Description for kafka.server.port."
+    },
+    {
+      "name": "kafka.group.name",
+      "type": "java.lang.String",
+      "description": "Description for kafka.group.name."
+    },
+    {
+      "name": "kafka.topic.name2",
+      "type": "java.lang.String",
+      "description": "Description for kafka.topic.name2."
+    }
+  ] }
