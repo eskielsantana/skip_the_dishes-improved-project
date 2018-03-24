@@ -20,12 +20,6 @@ public class EskielsBaseProject extends WebMvcConfigurerAdapter {
 	public static void main(String[] args) {
 		logger.info("Application Started");
 		SpringApplication.run(EskielsBaseProject.class, args);
-
-//		try {
-//			KafkaConsumerExample.goConsumer();
-//		} catch (InterruptedException e) {
-//			e.printStackTrace();
-//		}
 	}
 
 	// This function returns the data of the application in the swagger page

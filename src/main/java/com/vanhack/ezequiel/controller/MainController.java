@@ -27,9 +27,6 @@ public class MainController {
     @Autowired
     private CustomerBusinessLogicService customerBusinessLogicService;
 
-    @Autowired
-    private KafkaProducer kafkaProducer;
-
     @GetMapping("Order/{orderId}")
     public ResponseEntity<OrderDto> getOrderById(@RequestHeader String token, @PathVariable("orderId") Integer orderId) {
 
@@ -96,9 +93,6 @@ public class MainController {
 
     @GetMapping("Order/Status/{orderId}")
     public ResponseEntity<String> getOrderStatusById(@RequestHeader String token, @PathVariable("orderId") Integer orderId) {
-
-        //kafkaProducer.send("TESTE121324", token);
-
         logger.info("Requested the orther status by id:" + orderId);
         String status = orderBusinessLogicService.getOrderStatusById(orderId);
         logger.info("The order status was recovered successfully");
