@@ -52,11 +52,40 @@ The reason I created a second project for it is that I wanted to add some extra 
 ### Run the application (Windows or MacOS)
 
   $ java -jar SkipTheDishesChallenge-0.0.1-SNAPSHOT.jar
+
+## Usage
+
+### Swagger
+
+- You can access the web service using the swagger page "[http://localhost:8080/](http://localhost:8080/)"
+
+### Endpoints access
+
+- You will need a token to interact with any of the order-related endpoints, so go through the following steps to get one:
+
+  - Register a client by running the following post request:
+  ```
+  curl --location 'http://localhost:8080/api/v1/Customer' \
+  --header 'Content-Type: application/json' \
+  --data-raw '{
+      "email": "email@example.com",
+      "name": "jonhdoe",
+      "address": "123 Street",
+      "password": "password"
+  }'
+  ```
   
+  - Log in with the email and password you used above on the following request:
+  ```
+  curl --location 'http://localhost:8080/api/v1/Customer/auth' \
+  --header 'email: email@example.com' \
+  --header 'password: password'
+  ```
+
+> **Note:**
+>
+> This is a project from **2018** and since I am not maintaining it since that year it might have dependencies issues nowadays and the build might fail but still a good content for study
+
 ## Author
 
 - Ezequiel Sant'Ana Junior - [LinkedIn](https://www.linkedin.com/in/ezequiel-santana/)
-
-## Author Note
-
-This is a project from **2018** and since I am not maintaining it since that year it might have dependencies issues nowadays and the build might fail but still a good content for study
